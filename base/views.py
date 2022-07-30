@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic.list import ListView
+from base.models import Task
 
-def task_list(request):
-    return HttpResponse('Testing')
-    
+class TaskList(ListView):
+    model = Task
