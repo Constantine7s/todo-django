@@ -13,5 +13,5 @@ class Task(models.Model):
     title = models.CharField(max_length=255)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     description = models.CharField(max_length=255, blank=True, null=True)
-    complete = models.BooleanField(default=False, null=True)
+    complete = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
